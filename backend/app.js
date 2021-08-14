@@ -1,7 +1,20 @@
 const express = require("express");
+const mongoose = require("mongoose");
+const path = require("path");
 const helmet = require("helmet");
+const cameraRoutes = require("./routes/camera");
 
 const app = express();
+
+mongoose
+  .connect({ useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => {
+    console.log("Successfully connected to MongoDB Atlas!");
+  })
+  .catch((error) => {
+    console.log("Unable to connect to MongoDB Atlas!");
+    console.error(error);
+  });
 
 app.use(express.json());
 app.use(helmet());
@@ -22,5 +35,8 @@ app.use((req, res, next) => {
   );
   next();
 });
+
+app.use("/assets/images", express.static(path.join(__dirname, "images")));
+app.use("/api/cameras", cameraRoutes);
 
 module.exports = app;
