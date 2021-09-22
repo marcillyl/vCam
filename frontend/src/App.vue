@@ -1,46 +1,47 @@
 <template>
-  <HelloWorld msg="" />
+  <div>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+    />
+    <router-view />
+  </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
-
 export default {
-  name: "App",
-  components: {
-    HelloWorld,
-  },
+  name: 'App',
 };
 </script>
 
 <style>
 @font-face {
-  font-family: "OpenSans";
-  src: url("./assets/Fonts/Open_Sans/OpenSans-Light.ttf") format("truetype");
+  font-family: 'OpenSans';
+  src: url('./assets/Fonts/Open_Sans/OpenSans-Light.ttf') format('truetype');
   font-weight: 300;
 }
 @font-face {
-  font-family: "OpenSans";
-  src: url("./assets/Fonts/Open_Sans/OpenSans-Regular.ttf") format("truetype");
+  font-family: 'OpenSans';
+  src: url('./assets/Fonts/Open_Sans/OpenSans-Regular.ttf') format('truetype');
   font-weight: 400;
 }
 @font-face {
-  font-family: "OpenSans";
-  src: url("./assets/Fonts/Open_Sans/OpenSans-SemiBold.ttf") format("truetype");
+  font-family: 'OpenSans';
+  src: url('./assets/Fonts/Open_Sans/OpenSans-SemiBold.ttf') format('truetype');
   font-weight: 600;
 }
 @font-face {
-  font-family: "OpenSans";
-  src: url("./assets/Fonts/Open_Sans/OpenSans-Bold.ttf") format("truetype");
+  font-family: 'OpenSans';
+  src: url('./assets/Fonts/Open_Sans/OpenSans-Bold.ttf') format('truetype');
   font-weight: 700;
 }
 @font-face {
-  font-family: "OpenSans";
-  src: url("./assets/Fonts/Open_Sans/OpenSans-ExtraBold.ttf") format("truetype");
+  font-family: 'OpenSans';
+  src: url('./assets/Fonts/Open_Sans/OpenSans-ExtraBold.ttf') format('truetype');
   font-weight: 800;
 }
 #app {
-  font-family: "OpenSans", Avenir, Helvetica, Arial, sans-serif;
+  /* font-family: "OpenSans", Avenir, Helvetica, Arial, sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
