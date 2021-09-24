@@ -1,7 +1,7 @@
 <template>
   <div class="product">
     <Nav />
-    <section>
+    <section class="container">
       <article>
         <img :src="product.imageUrl" alt="#" />
         <h3>{{ product.name }}</h3>
@@ -16,22 +16,25 @@
         <button @click="addToCart()"><i class="fas fa-cart-plus"></i></button>
       </article>
     </section>
+    <Footer />
   </div>
 </template>
 
 <script>
-import axios from 'axios';
-import Nav from '../components/Nav.vue';
+import axios from "axios";
+import Nav from "../components/Nav.vue";
+import Footer from "../components/Footer.vue";
 export default {
-  name: 'product',
+  name: "product",
   components: {
     Nav,
+    Footer,
   },
   data: function() {
     return {
       id: this.$route.params.id,
       product: {},
-      lense: '',
+      lense: "",
     };
   },
   mounted: function() {

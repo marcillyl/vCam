@@ -1,17 +1,36 @@
 <template>
   <footer>
-    <ul>
-      <li>Home</li>
-      <li>Bracket</li>
-      <li>Find us</li>
-    </ul>
+    <section class="links">
+      <router-link class="footer__link" to="/">Home</router-link>
+      <router-link class="footer__link" to="/cart">Cart</router-link>
+      <router-link class="footer__link" to="/">Find us</router-link>
+    </section>
+    <p>Designed by marcillyl</p>
   </footer>
 </template>
 
 <script>
 export default {
-  name: 'Footer',
+  name: "Footer",
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+footer {
+  padding: 48px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 24px 0px;
+}
+.footer__link {
+  color: white;
+}
+</style>
