@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  name: "Footer",
+  name: 'Footer',
 };
 </script>
 
@@ -28,7 +28,7 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 24px 0px;
+  margin-bottom: 24px;
 }
 .footer__link {
   color: white;

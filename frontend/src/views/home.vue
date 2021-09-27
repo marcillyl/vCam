@@ -10,7 +10,7 @@
         <div class="header-text">
           <h1 class="home__headline">
             Explore <br />
-            <span>+</span> Share
+            <span>&amp;</span> Share
           </h1>
           <h2 class="home__text">
             In stimulos cum et potius stimulos erga propositum deberet fortunas
@@ -30,7 +30,7 @@
           <button @click="switchToLenses()">Lenses</button>
         </div>
       </div>
-      <section class="pane">
+      <section class="pane" id="#products">
         <div v-if="view === 'cameras'" class="products">
           <h3 class="products__headline">Choose your camera</h3>
           <p class="products__text">
@@ -53,32 +53,35 @@
         </div>
       </section>
     </div>
+    <Testimony />
     <Footer />
   </div>
 </template>
 
 <script>
-import Nav from "../components/Nav.vue";
-import Footer from "../components/Footer.vue";
-import ProductCard from "../components/ProductCard.vue";
+import Nav from '../components/Nav.vue';
+import Footer from '../components/Footer.vue';
+import ProductCard from '../components/ProductCard.vue';
+import Testimony from '../components/Testimony.vue';
 export default {
-  name: "home",
+  name: 'home',
   components: {
     Nav,
     Footer,
     ProductCard,
+    Testimony,
   },
   data: function() {
     return {
-      view: "cameras",
+      view: 'cameras',
     };
   },
   methods: {
     switchToCameras: function() {
-      this.view = "cameras";
+      this.view = 'cameras';
     },
     switchToLenses: function() {
-      this.view = "lenses";
+      this.view = 'lenses';
     },
   },
 };
@@ -89,12 +92,13 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 header img {
   position: relative;
   z-index: 0;
   opacity: 0.7;
-  widows: 400px;
+  width: 500px;
   height: 700px;
 }
 .header-text {
@@ -103,25 +107,23 @@ header img {
   background: #070e16bb;
   margin-left: -100px;
   padding: 24px;
+  max-width: 440px;
   border: solid 12px #3a475644;
 }
 .home__headline {
   text-align: right;
-  font-size: 5em;
+  font-size: 4.4em;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
-  line-height: 1em;
+  line-height: 1.1em;
 }
 .home__headline span {
-  font-size: 1.3em;
   color: #4a5766;
-  text-shadow: 7px 7px 0px #1a2736ee;
 }
 .home__text {
   margin-top: 24px;
   text-align: left;
-  font-size: 1.4em;
+  font-size: 1.34em;
   letter-spacing: 0.1em;
   font-weight: 500;
   line-height: 1.5em;
@@ -160,7 +162,6 @@ header,
   line-height: 1.7em;
 }
 button {
-  cursor: pointer;
   margin: 12px 24px;
   padding: 12px 36px;
   border: none;
@@ -169,6 +170,9 @@ button {
   font-size: 1em;
   letter-spacing: 0.1em;
   box-shadow: 4px 4px 14px #000000aa;
+}
+button:hover {
+  animation: shake 240ms ease-in-out both;
 }
 .products {
   display: flex;
@@ -195,5 +199,14 @@ button {
   padding: 48px 12px;
   background: #1a2736;
   box-shadow: inset 0px 4px 10px #000000aa;
+}
+@media screen and (max-width: 900px) {
+  header {
+    flex-direction: column-reverse;
+  }
+  .header-text {
+    margin-left: 0px;
+    margin-bottom: -100px;
+  }
 }
 </style>

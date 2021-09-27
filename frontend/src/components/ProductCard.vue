@@ -12,17 +12,17 @@
 </template>
 
 <script>
-import axios from "axios";
+import axios from 'axios';
 export default {
-  name: "ProductCard",
-  props: ["cath"],
+  name: 'ProductCard',
+  props: ['cath'],
   data: function() {
     return {
       products: null,
     };
   },
   mounted: function() {
-    if (this.cath === "cameras") {
+    if (this.cath === 'cameras') {
       this.getCameras();
     } else {
       // this.getLenses();
@@ -30,7 +30,7 @@ export default {
   },
   methods: {
     getCameras() {
-      axios.get("http://localhost:3000/api/cameras/").then((response) => {
+      axios.get('http://localhost:3000/api/cameras/').then((response) => {
         this.products = response.data;
       });
     },
@@ -50,8 +50,8 @@ export default {
   }
 }
 img {
-  width: 400px;
-  height: 300px;
+  width: 350px;
+  height: 250px;
   background: bisque;
   opacity: 0.77;
   transition: opacity 140ms ease-in-out;
@@ -59,11 +59,11 @@ img {
 section {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 }
 .card {
-  margin: 12px;
+  margin: 24px;
   padding: 12px 12px 12px 12px;
   background: white;
   box-shadow: 4px 4px 14px #000000aa;
@@ -77,7 +77,7 @@ section {
 }
 .product__name {
   font-weight: 500;
-  font-size: 1.3em;
+  font-size: 1.2em;
   text-align: center;
   margin: 0px auto;
   padding: 12px 24px;
