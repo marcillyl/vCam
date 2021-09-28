@@ -1,15 +1,10 @@
 <template>
-  <div class="cart">
-    <h1>{{ msg }}</h1>
-  </div>
+  <div class="cart"></div>
 </template>
 
 <script>
 export default {
   name: 'cart',
-  props: {
-    msg: String,
-  },
 };
 </script>
 

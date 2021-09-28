@@ -4,8 +4,6 @@
       <router-link :to="`/product/${product._id}`">
         <img :src="product.imageUrl" alt="#" />
         <h4 class="product__name">{{ product.name }}</h4>
-        <!-- <p>{{ product.description }}</p> -->
-        <!-- <p>{{ product.price / 100 }}</p> -->
       </router-link>
     </article>
   </section>
@@ -82,6 +80,6 @@ section {
   margin: 0px auto;
   padding: 12px 24px;
   background: #171e26;
-  color: blanchedalmond;
+  color: white;
 }
 </style>

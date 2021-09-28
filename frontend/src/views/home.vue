@@ -112,13 +112,14 @@ header img {
 }
 .home__headline {
   text-align: right;
-  font-size: 4.4em;
-  font-weight: 700;
+  font-size: 4.7em;
+  font-weight: 300;
   text-transform: uppercase;
   line-height: 1.1em;
+  letter-spacing: 0.1em;
 }
 .home__headline span {
-  color: #4a5766;
+  color: #fc345c;
 }
 .home__text {
   margin-top: 24px;
@@ -139,6 +140,7 @@ header,
   background: #f5f6f8;
   box-shadow: inset 0px 0px 10px #000000aa;
   color: #5a6776aa;
+  padding: 70px 0px;
   display: flex;
   flex-direction: column;
   justify-self: center;
@@ -179,6 +181,8 @@ button:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  max-width: 900px;
+  margin: auto;
 }
 .products__headline {
   margin: 12px 0px;

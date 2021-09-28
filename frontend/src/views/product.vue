@@ -93,17 +93,19 @@ export default {
     addToCart() {
       let self = this;
       let cartContent = JSON.parse(localStorage.getItem(this.id));
-      if (cartContent === null) {
-        let cart = [];
-        let product = {
-          lense: self.lense,
-          quantity: 1,
-        };
-        cart.push(product);
-        localStorage.setItem(this.id, JSON.stringify(cart));
-      } else {
-        this.checkLense(cartContent);
-        localStorage.setItem(this.id, JSON.stringify(cartContent));
+      if (this.lense != '') {
+        if (cartContent === null) {
+          let cart = [];
+          let product = {
+            lense: self.lense,
+            quantity: 1,
+          };
+          cart.push(product);
+          localStorage.setItem(this.id, JSON.stringify(cart));
+        } else {
+          this.checkLense(cartContent);
+          localStorage.setItem(this.id, JSON.stringify(cartContent));
+        }
       }
     },
   },
@@ -144,8 +146,8 @@ img {
   justify-content: flex-end;
 }
 .product__headline {
-  font-size: 1.4em;
-  color: blanchedalmond;
+  font-size: 1.7em;
+  font-weight: 300;
 }
 .product__text {
   max-width: 400px;
@@ -154,7 +156,6 @@ img {
 }
 .product__price {
   font-size: 1.2em;
-  color: blanchedalmond;
 }
 .select,
 .button {
@@ -162,8 +163,14 @@ img {
   background: transparent;
   border: none;
   padding: 12px 24px;
-  color: white;
   margin: 12px 0px;
   background: #3a4756;
+  color: white;
+}
+.button {
+  background: #ec244c;
+  font-size: 1.4em;
+  padding: 10px 24px;
+  width: 140px;
 }
 </style>
