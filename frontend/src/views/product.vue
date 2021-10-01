@@ -38,6 +38,9 @@
           </div>
         </div>
       </article>
+      <router-link to="/" class="back"
+        ><i class="far fa-arrow-alt-circle-left"></i
+      ></router-link>
     </div>
     <Testimony />
     <Footer />
@@ -159,9 +162,14 @@ export default {
 }
 .nav__link {
   color: white;
-  margin: 0px 24px;
+  margin: 0px 12px;
   letter-spacing: 0.1em;
   font-size: 15px;
+  padding: 7px 12px;
+  transition: background-color 140ms ease-in-out;
+}
+.nav__link:hover {
+  background: #2a3746;
 }
 .nav__link span {
   display: inline-block;
@@ -180,12 +188,13 @@ export default {
   }
   .nav__link {
     font-size: 14px;
-    margin: 0px 10px;
+    margin: 0px 4px;
   }
 }
 .container {
-  padding: 100px 12px;
+  padding: 100px 12px 40px 12px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -194,6 +203,7 @@ export default {
   flex-direction: column;
   background: #3a475644;
   padding: 24px;
+  margin-bottom: 40px;
   border: solid 1.5pt #3a475644;
   box-shadow: 4px 4px 14px #000000aa;
 }
@@ -249,6 +259,14 @@ export default {
 }
 .product-infos__button:disabled:hover {
   animation: none;
+}
+.back {
+  color: #5a6776;
+  font-size: 2.4em;
+  transition: color 140ms ease-in-out;
+}
+.back:hover {
+  color: white;
 }
 @media screen and (max-width: 800px) {
   .product__img {

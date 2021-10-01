@@ -32,7 +32,7 @@ const routes = [
   },
   {
     name: 'order',
-    path: '/order.html?orderId=:id',
+    path: '/order/:id',
     component: order,
     props: true,
   },

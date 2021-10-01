@@ -160,7 +160,7 @@ export default {
           address: this.address,
           email: this.email,
         },
-        products: [Object.keys(localStorage)],
+        products: [],
       };
       axios
         .post(
@@ -170,9 +170,8 @@ export default {
             headers: { 'Content-type': 'application/json' },
           }
         )
-        .then((response) => response.json())
-        .then((json) => {
-          window.location.href = `./order.html?orderId=${json.orderId}`;
+        .then((response) => {
+          this.$router.push(`/order/${response.data.orderId}`);
         });
     },
   },

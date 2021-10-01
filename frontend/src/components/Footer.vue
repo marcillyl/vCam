@@ -34,6 +34,11 @@ export default {
   margin: 4px 0px;
   color: white;
   letter-spacing: 0.1em;
+  padding: 7px 12px;
+  transition: background-color 140ms ease-in-out;
+}
+.footer-links__link:hover {
+  background: #1a2736;
 }
 .footer-legal {
   text-transform: uppercase;

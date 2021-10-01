@@ -41,9 +41,14 @@ export default {
 }
 .nav__link {
   color: white;
-  margin: 0px 24px;
+  margin: 0px 12px;
   letter-spacing: 0.1em;
   font-size: 15px;
+  padding: 7px 12px;
+  transition: background-color 140ms ease-in-out;
+}
+.nav__link:hover {
+  background: #2a3746;
 }
 .nav__link span {
   display: inline-block;
@@ -62,7 +67,7 @@ export default {
   }
   .nav__link {
     font-size: 14px;
-    margin: 0px 10px;
+    margin: 0px 4px;
   }
 }
 </style>
