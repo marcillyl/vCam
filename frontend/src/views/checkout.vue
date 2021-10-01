@@ -173,6 +173,7 @@ export default {
         .then((response) => {
           this.$router.push(`/order/${response.data.orderId}`);
         });
+      localStorage.clear();
     },
   },
 };

@@ -6,7 +6,8 @@
     </header>
     <section class="container">
       <article class="infos">
-        <h2></h2>
+        <i class="far fa-check-circle infos__icon"></i>
+        <p>Order ID : {{ orderId }}</p>
       </article>
     </section>
     <Testimony />
@@ -25,8 +26,13 @@ export default {
     Testimony,
     Footer,
   },
+  data: function() {
+    return {
+      orderId: this.$route.params.id,
+    };
+  },
   mounted: function() {
-    localStorage.clear();
+    console.log(this.orderId);
   },
 };
 </script>
@@ -60,15 +66,16 @@ export default {
   margin: auto;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background: #3a475644;
   padding: 24px;
   border: solid 1.5pt #3a475677;
   box-shadow: 4px 4px 14px #000000aa;
 }
-.infos__headline {
+.infos__icon {
+  font-size: 2.4em;
+  color: white;
   margin-bottom: 24px;
-  text-align: center;
-  font-size: 1.3em;
-  font-weight: 400;
 }
 </style>

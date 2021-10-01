@@ -31,7 +31,6 @@ export default {
   margin-bottom: 24px;
 }
 .footer-links__link {
-  margin: 4px 0px;
   color: white;
   letter-spacing: 0.1em;
   padding: 7px 12px;
