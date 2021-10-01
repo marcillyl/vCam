@@ -45,4 +45,9 @@ export default {
   margin: 24px 0px;
   line-height: 1.7em;
 }
+@media screen and (max-width: 500px) {
+  .testimony__text {
+    font-size: 14px;
+  }
+}
 </style>

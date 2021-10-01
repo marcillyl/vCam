@@ -1,9 +1,9 @@
 <template>
-  <section>
+  <section class="container">
     <article class="card" v-for="product in products" :key="product.id">
       <router-link :to="`/product/${product._id}`">
-        <img :src="product.imageUrl" alt="#" />
-        <h4 class="product__name">{{ product.name }}</h4>
+        <img :src="product.imageUrl" alt="#" class="card__img" />
+        <h4 class="card__headline">{{ product.name }}</h4>
       </router-link>
     </article>
   </section>
@@ -42,19 +42,7 @@ export default {
 </script>
 
 <style scoped>
-@media screen and (max-width: 540px) {
-  img {
-    width: 100%;
-  }
-}
-img {
-  width: 350px;
-  height: 250px;
-  background: bisque;
-  opacity: 0.77;
-  transition: opacity 140ms ease-in-out;
-}
-section {
+.container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -73,7 +61,14 @@ section {
 .card:hover img {
   opacity: 1;
 }
-.product__name {
+.card__img {
+  width: 350px;
+  height: 250px;
+  background: white;
+  opacity: 0.77;
+  transition: opacity 140ms ease-in-out;
+}
+.card__headline {
   font-weight: 500;
   font-size: 1.2em;
   text-align: center;
@@ -81,5 +76,13 @@ section {
   padding: 12px 24px;
   background: #171e26;
   color: white;
+}
+@media screen and (max-width: 500px) {
+  .card {
+    margin: 12px 0px;
+  }
+  .card__img {
+    width: 300px;
+  }
 }
 </style>

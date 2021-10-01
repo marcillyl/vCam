@@ -1,11 +1,11 @@
 <template>
-  <footer>
-    <section class="links">
-      <router-link class="footer__link" to="/">Home</router-link>
-      <router-link class="footer__link" to="/cart">Cart</router-link>
-      <router-link class="footer__link" to="/">Find us</router-link>
+  <footer class="footer">
+    <section class="footer-links">
+      <router-link class="footer-links__link" to="/">Home</router-link>
+      <router-link class="footer-links__link" to="/cart">Cart</router-link>
+      <router-link class="footer-links__link" to="/">Find us</router-link>
     </section>
-    <p>Designed by marcillyl</p>
+    <p class="footer-legal">Designed by marcillyl</p>
   </footer>
 </template>
 
@@ -16,7 +16,7 @@ export default {
 </script>
 
 <style scoped>
-footer {
+.footer {
   padding: 48px 24px;
   display: flex;
   flex-direction: column;
@@ -31,6 +31,14 @@ footer {
   margin-bottom: 24px;
 }
 .footer__link {
+  margin: 4px 0px;
   color: white;
+  letter-spacing: 0.1em;
+}
+.footer-legal {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #4a5766;
+  font-size: 14px;
 }
 </style>

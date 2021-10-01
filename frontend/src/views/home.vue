@@ -1,11 +1,12 @@
 <template>
-  <div class="home">
+  <div>
     <Nav />
     <div class="container">
-      <header>
+      <header class="header">
         <img
           src="http://localhost:3000/assets/images/cameras/IMG_0035.JPG"
           alt="#"
+          class="header__img"
         />
         <div class="header-text">
           <h1 class="home__headline">
@@ -49,7 +50,8 @@
             quod contumacem praefectum, quid rerum ordo postulat ignorare
             dissimulantem formidine tenus.
           </p>
-          <ProductCard :cath="`lenses`" class="product" />
+          <h4>Coming soon ...</h4>
+          <!-- <ProductCard :cath="`lenses`" class="product" /> -->
         </div>
       </section>
     </div>
@@ -60,16 +62,16 @@
 
 <script>
 import Nav from '../components/Nav.vue';
-import Footer from '../components/Footer.vue';
 import ProductCard from '../components/ProductCard.vue';
 import Testimony from '../components/Testimony.vue';
+import Footer from '../components/Footer.vue';
 export default {
   name: 'home',
   components: {
     Nav,
-    Footer,
     ProductCard,
     Testimony,
+    Footer,
   },
   data: function() {
     return {
@@ -88,13 +90,13 @@ export default {
 </script>
 
 <style scoped>
-header {
+.header {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 }
-header img {
+.header__img {
   position: relative;
   z-index: 0;
   opacity: 0.7;
@@ -148,13 +150,11 @@ header,
 }
 .switch__headline {
   text-transform: uppercase;
-  background: crimson;
+  background: #dc143ccc;
   color: white;
   padding: 12px 24px;
-  font-size: 1em;
   letter-spacing: 0.1em;
   font-weight: 400;
-  opacity: 0.77;
   box-shadow: inset 4px 4px 14px #00000044;
 }
 .switch__text {
@@ -205,12 +205,36 @@ button:hover {
   box-shadow: inset 0px 4px 10px #000000aa;
 }
 @media screen and (max-width: 900px) {
-  header {
+  .header {
     flex-direction: column-reverse;
   }
   .header-text {
     margin-left: 0px;
     margin-bottom: -100px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .header {
+    padding-bottom: 0px;
+  }
+  .header__img {
+    width: 100%;
+    height: 500px;
+  }
+  .header-text {
+    max-width: unset;
+  }
+  .home__headline {
+    font-size: 3.4em;
+  }
+  .home__text {
+    font-size: 1.2em;
+  }
+  .switch__text {
+    font-size: 14px;
+  }
+  .products__text {
+    font-size: 1em;
   }
 }
 </style>
