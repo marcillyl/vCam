@@ -23,14 +23,18 @@
           <p>{{ item.quantity }}</p>
         </article>
       </div>
-      <p class="cart__price">Total price : {{ total }} €</p>
+      <p class="container__text container__text--price">
+        Total price : {{ total }} €
+      </p>
       <router-link to="/checkout" class="checkout">
-        <button class="button--checkout">Checkout</button>
+        <button class="button button--checkout">Checkout</button>
       </router-link>
       <button class="button" @click="clearCart()">Clear cart</button>
-      <router-link to="/" class="link">Continue shopping</router-link>
+      <p class="container__text">
+        <router-link to="/" class="link">Continue shopping</router-link>
+      </p>
     </section>
-    <section v-else>
+    <section v-else class="container">
       <p class="container__text">
         Your cart is empty !
         <router-link to="/" class="link">Start shopping now</router-link>
@@ -99,7 +103,7 @@ export default {
   padding: 110px 0px 40px 0px;
   display: flex;
 }
-.cart__headline {
+.header__headline {
   text-align: center;
   font-size: 2em;
   font-weight: 400;
@@ -110,7 +114,7 @@ export default {
   border: solid 10px #3a475677;
   padding: 12px 24px;
 }
-.cart__headline span {
+.header__headline span {
   color: #fc345c;
 }
 .container {
@@ -122,6 +126,10 @@ export default {
 }
 .container__text {
   margin-top: 24px;
+}
+.container__text--price {
+  font-size: 1.1em;
+  margin-bottom: 24px;
 }
 .cart {
   margin-bottom: 12px;
@@ -179,8 +187,5 @@ export default {
   text-transform: uppercase;
   letter-spacing: 0.1em;
   font-size: 14px;
-}
-.cart__price {
-  margin-bottom: 24px;
 }
 </style>

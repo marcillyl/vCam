@@ -5,7 +5,7 @@
       <router-link class="footer-links__link" to="/cart">Cart</router-link>
       <router-link class="footer-links__link" to="/">Find us</router-link>
     </section>
-    <p class="footer-legal">Designed by marcillyl</p>
+    <p class="footer-legal">Designed by Luc Marcilly</p>
   </footer>
 </template>
 
@@ -23,14 +23,14 @@ export default {
   justify-content: center;
   align-items: center;
 }
-.links {
+.footer-links {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-bottom: 24px;
 }
-.footer__link {
+.footer-links__link {
   margin: 4px 0px;
   color: white;
   letter-spacing: 0.1em;
