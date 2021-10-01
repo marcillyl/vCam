@@ -3,6 +3,7 @@ import home from '../views/home.vue';
 import product from '../views/product.vue';
 import cart from '../views/cart.vue';
 import checkout from '../views/checkout.vue';
+import order from '../views/order.vue';
 
 const routes = [
   {
@@ -27,6 +28,12 @@ const routes = [
     name: 'checkout',
     path: '/checkout',
     component: checkout,
+    props: true,
+  },
+  {
+    name: 'order',
+    path: '/order.html?orderId=:id',
+    component: order,
     props: true,
   },
 ];

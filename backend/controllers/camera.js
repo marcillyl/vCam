@@ -1,4 +1,4 @@
-const uuid = require('uuid');
+const { v4: uuidv4 } = require('uuid');
 const Camera = require('../models/Camera');
 
 exports.getAllCameras = (req, res, next) => {
@@ -33,7 +33,6 @@ exports.orderCameras = (req, res, next) => {
     !req.body.contact.firstName ||
     !req.body.contact.lastName ||
     !req.body.contact.address ||
-    !req.body.contact.city ||
     !req.body.contact.email ||
     !req.body.products
   ) {
@@ -47,12 +46,6 @@ exports.orderCameras = (req, res, next) => {
           if (!camera) {
             reject('Camera not found: ' + productId);
           }
-          camera.imageUrl =
-            req.protocol +
-            '://' +
-            req.get('host') +
-            '/images/' +
-            camera.imageUrl;
           resolve(camera);
         })
         .catch(() => {
@@ -63,7 +56,7 @@ exports.orderCameras = (req, res, next) => {
   }
   Promise.all(queries)
     .then((cameras) => {
-      const orderId = uuid();
+      const orderId = uuidv4();
       return res.status(201).json({
         contact: req.body.contact,
         products: cameras,
