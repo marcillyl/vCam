@@ -217,6 +217,9 @@ button:hover {
   .header {
     padding-bottom: 0px;
   }
+  .header-text {
+    margin: 0px 12px -100px 12px;
+  }
   .header__img {
     width: 100%;
     height: 500px;

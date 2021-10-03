@@ -7,7 +7,7 @@
     <section v-if="!empty" class="container">
       <div v-for="product in cart" :key="product" class="cart">
         <article class="cart-product">
-          <div></div>
+          <div class="cart-product__img"></div>
           <h3 class="cart-product__headline">Product</h3>
           <p>Lense</p>
           <p>Quantity</p>
@@ -102,6 +102,7 @@ export default {
 .header {
   padding: 110px 0px 40px 0px;
   display: flex;
+  justify-content: center;
 }
 .header__headline {
   text-align: center;
@@ -187,5 +188,23 @@ export default {
   text-transform: uppercase;
   letter-spacing: 0.1em;
   font-size: 14px;
+}
+@media screen and (max-width: 600px) {
+  .header__headline {
+    font-size: 1.7em;
+    margin: 0px 12px;
+  }
+  .cart {
+    width: 100%;
+  }
+  .cart-product {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .cart-product__headline {
+    font-size: 1em;
+  }
+  .cart-product__img {
+    display: none;
+  }
 }
 </style>

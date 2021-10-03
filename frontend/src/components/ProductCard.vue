@@ -83,6 +83,7 @@ export default {
   }
   .card__img {
     width: 300px;
+    height: 200px;
   }
 }
 </style>

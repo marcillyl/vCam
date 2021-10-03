@@ -183,6 +183,7 @@ export default {
 .header {
   padding: 110px 0px 40px 0px;
   display: flex;
+  justify-content: center;
 }
 .header__headline {
   text-align: center;
@@ -210,6 +211,7 @@ export default {
   flex-direction: column;
   background: #3a475644;
   padding: 24px;
+  margin: 0px 12px;
   border: solid 1.5pt #3a475677;
   box-shadow: 4px 4px 14px #000000aa;
 }
@@ -263,5 +265,24 @@ export default {
 }
 .valid {
   opacity: 1;
+}
+@media screen and (max-width: 500px) {
+  .header__headline {
+    font-size: 1.7em;
+    margin: 0px 12px;
+  }
+  .form {
+    width: 100%;
+    max-width: 340px;
+    padding: 24px 12px;
+  }
+  .form-bloc {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .form-bloc__input {
+    width: 100%;
+    margin: 12px 0px 0px 0px;
+  }
 }
 </style>

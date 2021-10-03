@@ -78,4 +78,14 @@ export default {
   color: white;
   margin-bottom: 24px;
 }
+@media screen and (max-width: 600px) {
+  .header__headline {
+    font-size: 1.7em;
+    margin: 0px 12px;
+  }
+  .infos {
+    margin: 0px 12px;
+    text-align: center;
+  }
+}
 </style>
