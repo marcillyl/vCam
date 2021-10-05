@@ -2,6 +2,8 @@
 
 ## Description 🔎 
 
+> Work in progress
+
 vCam is a simple e-shop website based on a student project. Rebuilt from scratch using Vue.js, it's a sandbox to try out things and ideas.
 
 Original repo can be found here : https://github.com/OpenClassrooms-Student-Center/P5-Dev-Web-Kanap
