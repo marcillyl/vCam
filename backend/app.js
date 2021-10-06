@@ -1,6 +1,7 @@
+const path = require("path");
+require("dotenv").config;
 const express = require("express");
 const mongoose = require("mongoose");
-const path = require("path");
 const helmet = require("helmet");
 const cameraRoutes = require("./routes/camera");
 
