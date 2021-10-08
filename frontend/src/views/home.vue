@@ -158,9 +158,8 @@ header,
   box-shadow: inset 4px 4px 14px #00000044;
 }
 .switch__text {
-  font-weight: 600;
   max-width: 500px;
-  margin: 24px 0px;
+  margin: 24px 12px;
   line-height: 1.7em;
 }
 button {

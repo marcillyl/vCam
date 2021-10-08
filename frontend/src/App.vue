@@ -32,8 +32,7 @@ export default {
 }
 @font-face {
   font-family: 'OpenSansItalic';
-  src: url('./assets/Fonts/Open_Sans/OpenSans-SemiBoldItalic.ttf')
-    format('truetype');
+  src: url('./assets/Fonts/Open_Sans/OpenSans-Italic.ttf') format('truetype');
   font-weight: 600;
 }
 @font-face {
